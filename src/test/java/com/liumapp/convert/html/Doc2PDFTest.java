@@ -1,11 +1,9 @@
-package com.liumapp.convert.doc;
+package com.liumapp.convert.html;
 
 import junit.framework.TestCase;
 import org.junit.Test;
 
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.InputStream;
 
 /**
  * @author liumapp
@@ -17,9 +15,9 @@ import java.io.InputStream;
 
 public class Doc2PDFTest extends TestCase {
 
-    private String pdfPath = "/usr/local/tomcat/project/convert-doc-to-pdf/test.pdf";
+    private String pdfPath = "/usr/local/tomcat/project/convert-html-to-pdf/test.pdf";
 
-    private String docPath = "/usr/local/tomcat/project/convert-doc-to-pdf/doc/test.doc";
+    private String docPath = "/usr/local/tomcat/project/convert-html-to-pdf/html/test.html";
 
     private String htmlContent = "<!DOCTYPE html>
 <html>

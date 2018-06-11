@@ -7,17 +7,17 @@ import com.aspose.words.*;
 
 /**
  * @author liumapp
- * @file Doc2PDF.java
+ * @file Html2PDF.java
  * @email liumapp.com@gmail.com
  * @homepage http://www.liumapp.com
  * @date 4/25/18
  */
-public class Doc2PDF {
+public class Html2PDF {
 
     public boolean getLicense() {
         boolean result = false;
         try {
-            InputStream is = Doc2PDF.class.getClassLoader().getResourceAsStream("license.xml");
+            InputStream is = Html2PDF.class.getClassLoader().getResourceAsStream("license.xml");
             License aposeLic = new License();
             aposeLic.setLicense(is);
             result = true;

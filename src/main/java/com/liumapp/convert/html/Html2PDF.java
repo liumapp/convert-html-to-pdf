@@ -27,7 +27,7 @@ public class Html2PDF {
         return result;
     }
 
-    public void doc2pdf(String pdfPath , String wordPath) {
+    public void html2pdf(String pdfPath , String htmlContent) {
         // 验证License 若不验证则转化出的pdf文档会有水印产生
         if (!getLicense()) {
             return;
@@ -36,7 +36,9 @@ public class Html2PDF {
             long old = System.currentTimeMillis();
             File file = new File(pdfPath);//新建一个空白pdf文档
             FileOutputStream os = new FileOutputStream(file);
-            Document doc = new Document(wordPath);//Address是将要被转化的word文档
+            Document doc = new Document();
+            DocumentBuilder builder = new DocumentBuilder(doc);
+            builder.insertHtml(htmlContent);
             doc.save(os, SaveFormat.PDF);//全面支持DOC, DOCX, OOXML, RTF HTML, OpenDocument, PDF, EPUB, XPS, SWF 相互转换
             long now = System.currentTimeMillis();
             System.out.println("共耗时：" + ((now - old) / 1000.0) + "秒");  //转化用时

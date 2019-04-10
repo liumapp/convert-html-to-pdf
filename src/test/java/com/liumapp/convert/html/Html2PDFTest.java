@@ -1,8 +1,14 @@
 package com.liumapp.convert.html;
 
+import com.itextpdf.text.DocumentException;
 import com.liumapp.qtools.file.basic.FileTool;
+import com.liumapp.qtools.file.load.LoadFileTool;
 import junit.framework.TestCase;
 import org.junit.Test;
+import org.xhtmlrenderer.extend.NamespaceHandler;
+import org.xhtmlrenderer.simple.NoNamespaceHandler;
+import org.xhtmlrenderer.simple.PDFRenderer;
+import org.xhtmlrenderer.simple.XHTMLPanel;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -36,6 +42,13 @@ public class Html2PDFTest extends TestCase {
         html2PDF.html2pdf("./test2.pdf", htmlContents);//样式出现异常
     }
 
-
+    @Test
+    public void testHtmlFileByFlyingsaucer () throws IOException, DocumentException {
+//        XHTMLPanel panel = new XHTMLPanel();
+//        NamespaceHandler nsh = new M()
+        String htmlFilePath = Html2PDFTest.class.getClassLoader().getResource("01.html").getFile();
+//        byte[] htmlContents = LoadFileTool.loadFile(new File(htmlFilePath));
+        PDFRenderer.renderToPDF(new File(htmlFilePath), "./test3.pdf");
+    }
 
 }

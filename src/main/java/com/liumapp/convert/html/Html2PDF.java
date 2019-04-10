@@ -36,8 +36,11 @@ public class Html2PDF {
             long old = System.currentTimeMillis();
             File file = new File(pdfPath);//新建一个空白pdf文档
             FileOutputStream os = new FileOutputStream(file);
-            Document doc = new Document();
-            DocumentBuilder builder = new DocumentBuilder(doc);
+            DocumentBuilder builder = new DocumentBuilder();
+//            PageSetup ps = builder.getPageSetup();
+//            ps.setPageHeight(1500);
+//            ps.setPageWidth(1000);
+            Document doc = builder.getDocument();
             builder.insertHtml(htmlContent);
             doc.save(os, SaveFormat.PDF);//全面支持DOC, DOCX, OOXML, RTF HTML, OpenDocument, PDF, EPUB, XPS, SWF 相互转换
             long now = System.currentTimeMillis();

@@ -31,7 +31,7 @@ public class Html2PDFTest extends TestCase {
         Html2PDF html2PDF = new Html2PDF();
         String htmlFilePath = Html2PDFTest.class.getClassLoader().getResource("01.html").getFile();
         String htmlContents = FileTool.readFileAsString(htmlFilePath);
-        html2PDF.html2pdf("./test2.pdf", htmlContents);//样式出现异常
+        html2PDF.html2pdf("./test5.pdf", htmlContents);//样式出现异常
     }
 
     @Test

@@ -4,7 +4,7 @@
 
   <groupId>com.liumapp.convert.html</groupId>
   <artifactId>convert-html-to-pdf</artifactId>
-  <version>v1.2.0</version>
+  <version>v1.1.0</version>
   <packaging>jar</packaging>
 
   <properties>
@@ -20,16 +20,16 @@
     </developer>
   </developers>
 
-  <name>convert-html-to-pdf</name>
-  <url>http://maven.apache.org</url>
-  <description>Using Aspose.World to convert html to pdf</description>
-
   <repositories>
     <repository>
       <id>liumapp</id>
-      <url>http://118.190.204.17:8081/liumapp</url>
+      <url>http://118.190.204.17:8081/repository/liumapp</url>
     </repository>
   </repositories>
+
+  <name>convert-html-to-pdf</name>
+  <url>http://maven.apache.org</url>
+  <description>Using Aspose.World to convert html to pdf</description>
 
   <dependencies>
     <dependency>
@@ -39,7 +39,7 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>com.aspose</groupId>
+      <groupId>com.aspose.words</groupId>
       <artifactId>aspose-words</artifactId>
       <version>15.8.0</version>
     </dependency>

@@ -4,7 +4,7 @@
 
   <groupId>com.liumapp.convert.html</groupId>
   <artifactId>convert-html-to-pdf</artifactId>
-  <version>v1.1.0</version>
+  <version>v1.2.0</version>
   <packaging>jar</packaging>
 
   <properties>
@@ -19,13 +19,6 @@
       <url>http://www.liumapp.com</url>
     </developer>
   </developers>
-
-  <repositories>
-    <repository>
-      <id>test</id>
-      <url>http://www.liumapp.com:8081/repository/liumapp/</url>
-    </repository>
-  </repositories>
 
   <name>convert-html-to-pdf</name>
   <url>http://maven.apache.org</url>

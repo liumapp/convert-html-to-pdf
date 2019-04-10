@@ -1,6 +1,10 @@
 # convert-html-to-pdf
 Using Aspose.World to convert html to pdf .
 
+该项目已经弃用，请勿使用
+
+This project has been discarded. Plz do not use it.
+
 ## how to use
 
 * simple run com.liumapp.convert.html.Html2PDFTest

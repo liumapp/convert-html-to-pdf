@@ -1,10 +1,12 @@
 package com.liumapp.convert.html;
 
+import com.liumapp.qtools.file.basic.FileTool;
 import junit.framework.TestCase;
 import org.junit.Test;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 
 /**
  * @author liumapp
@@ -27,12 +29,13 @@ public class Html2PDFTest extends TestCase {
     }
 
     @Test
-    public void testHtmlFile () {
+    public void testHtmlFile () throws IOException {
         Html2PDF html2PDF = new Html2PDF();
         String htmlFilePath = Html2PDFTest.class.getClassLoader().getResource("01.html").getFile();
-        File htmlFile = new File(htmlFilePath);
-
-        html2PDF.html2pdf("D:\\project\\convert-html-to-pdf\\test2.pdf", "a");
+        String htmlContents = FileTool.readFileAsString(htmlFilePath);
+        html2PDF.html2pdf("./test2.pdf", htmlContents);//样式出现异常
     }
+
+
 
 }

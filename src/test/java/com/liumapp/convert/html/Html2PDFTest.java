@@ -36,13 +36,7 @@ public class Html2PDFTest extends TestCase {
 
     @Test
     public void testHtmlFileByFlyingsaucer () throws IOException {
-        Document document = new Document();
-        PdfWriter writer = PdfWriter.getInstance(document,
-                new FileOutputStream("src/output/html.pdf"));
-        document.open();
-        XMLWorkerHelper.getInstance().parseXHtml(writer, document,
-                new FileInputStream(filename));
-        document.close();
+
     }
 
 }

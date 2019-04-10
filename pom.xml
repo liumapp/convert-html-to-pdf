@@ -24,8 +24,6 @@
   <url>http://maven.apache.org</url>
   <description>Using Aspose.World to convert html to pdf</description>
 
-
-
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -36,7 +34,7 @@
     <dependency>
       <groupId>com.aspose</groupId>
       <artifactId>aspose-words</artifactId>
-      <version>14.7.0</version>
+      <version>15.8.0</version>
     </dependency>
     <dependency>
       <groupId>com.liumapp.qtools.file</groupId>

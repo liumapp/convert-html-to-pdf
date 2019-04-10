@@ -3,6 +3,7 @@ package com.liumapp.convert.html;
 import junit.framework.TestCase;
 import org.junit.Test;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 
 /**
@@ -21,9 +22,17 @@ public class Html2PDFTest extends TestCase {
 
     @Test
     public void testConvert () throws FileNotFoundException {
-
         Html2PDF html2PDF = new Html2PDF();
         html2PDF.html2pdf(pdfPath,htmlContent);
+    }
+
+    @Test
+    public void testHtmlFile () {
+        Html2PDF html2PDF = new Html2PDF();
+        String htmlFilePath = Html2PDFTest.class.getClassLoader().getResource("01.html").getFile();
+        File htmlFile = new File(htmlFilePath);
+
+        html2PDF.html2pdf("D:\\project\\convert-html-to-pdf\\test2.pdf", "a");
     }
 
 }
